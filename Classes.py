@@ -2,7 +2,7 @@
 from datetime import datetime
 
 class Customer:
-    
+    no_customer = 0
     dicount_price = 0.1
     
     def __init__ (self , name , dob , gender):
@@ -12,6 +12,7 @@ class Customer:
         self.email = name + "@gmail.com"
         self.cart = []
         self.cart_total = 0
+        Customer.no_customer +=1
         
     def age (self):
         yob = datetime.strptime(self.dob, '%Y-%m-%d').year
@@ -52,9 +53,9 @@ print ('The dicount of customer 2 user is ', customer_1.discount())
 print ('The total of the customer_2 {} '.format (customer_2.calculate_total() ))
 print ('The dicount of customer 2 user is ', customer_2.discount())
 
-
-
-
+print ('the total of total customeris ' , Customer.no_customer)
+print ('the total of total customeris ' , customer_1.no_customer)
+print ('the total of total customeris ' , customer_2.no_customer)
 
 
 
