@@ -46,8 +46,6 @@ customer_2.add_cart({'product':'phone' , 'price':1500})
 customer_2.add_cart({'product':'bag' , 'price':700})
 
 
-
-
 print ('The total of the customer_1 {} '.format (customer_1.calculate_total() ))
 print ('The dicount of customer 2 user is ', customer_1.discount())
 
